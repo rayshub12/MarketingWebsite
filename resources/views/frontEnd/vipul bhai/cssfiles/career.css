@@ -1,0 +1,26 @@
+body{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; margin:auto;}
+.career_wrap{width:98%; border:1px solid silver; margin:auto; overflow:hidden;}
+.career_left{ float:left; width:26%; background:#99ccff; height:800px;}
+.career_right{ float:right; width:100%;}
+.career_right p{color:#333333; }
+.career_right h1{color:#006699; font-size:18px;}
+.career_jobbox{width:500px;}
+.career_jobboxfent{width:640px; border:1px solid #999999; background:#cee0ff; height:20px; margin:2px 0px 2px 0px; padding:5px;}
+.career_jobboxdark{width:640px;  border:1px solid #999999; color:#0C3077;background:#E9EEF5; height:20px;  padding:5px;}
+
+/*CAREER INNER PAGE CSS START*/
+
+.career_sapcer{ clear:both; height:20px;}
+.career_innerwrap{ width:100%; }
+.career_innerwrap p{ width:95%;text-align:left; margin-left:5px; }
+.career_innerwrap table{ font-family:Arial; color:#333333; font-size:12px; font-weight:bold; }
+.career_innerwrap  select{height:19px; width:147px;  border:1px solid #cccccc;} 
+.career_innerwrap . input , select{ width:200px; height:15px; border:1px solid #cccccc;}
+.career_innerwrap h1{width:100%; background:#E9EEF5; height:28px; color:#0C3077; font-size:14px; margin:0px; padding:0px; line-height:30px;text-align:center;}
+.career_title2{background:#E9EEF5; font-weight:bold;  color:#0C3077; font-size:14px; margin:0px; padding:0px; line-height:30px; width:100%;text-align:left; padding-left:20px;}
+.career_upload  {background:#EAF9FE; height:28px; font-weight:bold;  color:#0C3077; font-size:14px; margin:0px; padding:0px; line-height:30px;text-align:center; width:100%;margin:10px 10px 10px 10px;}
+.career_content {text-align:left; width:98%; padding-left:10px;}
+.left{float:left;}
+.right{float:right; padding-right:176px; margin-left: 0px;}
+
+/*CAREER INNER PAGE CSS CLOSED*/

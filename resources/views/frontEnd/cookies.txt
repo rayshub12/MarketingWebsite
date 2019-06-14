@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.marketsandmarkets.com	TRUE	/	FALSE	1999999999	ASPSESSIONIDSQASCDRD	MEKNOCHCFLNIAFLJOJNHLAAL
+.comm100.com	TRUE	/	FALSE	1999999999	__cfduid	d9fbb39a8ff38e77b22008e9e3b3d38ad1560088686
+.hs-scripts.com	TRUE	/	FALSE	1999999999	__cfduid	dd36efbee075307621adea6749b72697c1560088888
+.statcounter.com	TRUE	/	FALSE	1999999999	__cfduid	d712d632370882aaf1c57794261e62d5f1560089032
+
