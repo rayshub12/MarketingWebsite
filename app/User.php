@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'password', 'phonecode', 'phone', 'country', 'state', 'city', 'usertype', 'provider', 'provider_id', 'servicetypeid'
     ];
 
     /**
@@ -28,6 +28,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function hasRole($role){
+        return $this->admin==$role;
+    }
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -36,4 +40,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function addNew($input)
+    {
+        $check = static::where('twitter_id',$input['twitter_id'])->first();
+
+        if(is_null($check)){
+            return static::create($input);
+        }
+        return $check;
+    }
 }
