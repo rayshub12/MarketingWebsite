@@ -1,5 +1,4 @@
-@extends('admin.layouts.adminLayout.admin_design')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="pcoded-content">
     <div class="pcoded-inner-content">
         <div class="main-body">
@@ -267,8 +266,8 @@
                                     <div class="row m-b-25">
                                         <div class="col-auto p-r-0">
                                             <div class="u-img">
-                                                <img src="{{ asset('assets/images/breadcrumb-bg.jpg')}}" alt="user image" class="img-radius cover-img">
-                                                <img src="{{ asset('assets/images/avatar-2.jpg')}}" alt="user image" class="img-radius profile-img">
+                                                <img src="<?php echo e(asset('assets/images/breadcrumb-bg.jpg')); ?>" alt="user image" class="img-radius cover-img">
+                                                <img src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="user image" class="img-radius profile-img">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -280,8 +279,8 @@
                                     <div class="row m-b-25">
                                         <div class="col-auto p-r-0">
                                             <div class="u-img">
-                                                <img src="{{ asset('assets/images/breadcrumb-bg.jpg')}}" alt="user image" class="img-radius cover-img">
-                                                <img src="{{ asset('assets/images/avatar-2.jpg')}}" alt="user image" class="img-radius profile-img">
+                                                <img src="<?php echo e(asset('assets/images/breadcrumb-bg.jpg')); ?>" alt="user image" class="img-radius cover-img">
+                                                <img src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="user image" class="img-radius profile-img">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -293,8 +292,8 @@
                                     <div class="row m-b-25">
                                         <div class="col-auto p-r-0">
                                             <div class="u-img">
-                                                <img src="{{ asset('assets/images/breadcrumb-bg.jpg')}}" alt="user image" class="img-radius cover-img">
-                                                <img src="{{ asset('assets/images/avatar-2.jpg')}}" alt="user image" class="img-radius profile-img">
+                                                <img src="<?php echo e(asset('assets/images/breadcrumb-bg.jpg')); ?>" alt="user image" class="img-radius cover-img">
+                                                <img src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="user image" class="img-radius profile-img">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -306,8 +305,8 @@
                                     <div class="row m-b-5">
                                         <div class="col-auto p-r-0">
                                             <div class="u-img">
-                                                <img src="{{ asset('assets/images/breadcrumb-bg.jpg')}}" alt="user image" class="img-radius cover-img">
-                                                <img src="{{ asset('assets/images/avatar-2.jpg')}}" alt="user image" class="img-radius profile-img">
+                                                <img src="<?php echo e(asset('assets/images/breadcrumb-bg.jpg')); ?>" alt="user image" class="img-radius cover-img">
+                                                <img src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="user image" class="img-radius profile-img">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -375,7 +374,7 @@
                                                             <tr>
                                                                 <td class="b-none">
                                                                     <a href="#!" class="align-middle">
-                                                                    <img src="{{ asset('assets/images/avatar-2.jpg')}}" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                    <img src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                                     <div class="d-inline-block">
                                                                         <h6>Jeny William</h6>
                                                                         <p class="text-muted m-b-0">Graphic Designer</p>
@@ -402,7 +401,7 @@
                                     <div class="col-sm-4 bg-c-lite-green user-profile">
                                         <div class="card-block text-center text-white">
                                             <div class="m-b-25">
-                                                <img src="{{ asset('assets/images/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
+                                                <img src="<?php echo e(asset('assets/images/avatar-4.jpg')); ?>" class="img-radius" alt="User-Profile-Image">
                                             </div>
                                             <h6 class="f-w-600">Jeny William</h6>
                                             <p>Web Designer</p>
@@ -509,4 +508,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layouts.adminLayout.admin_design', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\GITCODE\MarketingWebsite\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>

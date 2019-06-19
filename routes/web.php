@@ -23,17 +23,17 @@ Route::get('/admin/dashboard', 'AdminController@dashboard');
 
 Route::group(['middleware' => ['admin', 'admin:1']], function () {
     Route::get('/admin/dashboard', 'AdminController@dashboard');
-    Route::get('/admin/profile', 'AdminController@adminProfile');
-    Route::get('/admin/check-pwd', 'AdminController@chkpassword');
-    Route::match(['get', 'post'], '/admin/update-pwd', 'AdminController@updatePassword');
+    // Route::get('/admin/profile', 'AdminController@adminProfile');
+    // Route::get('/admin/check-pwd', 'AdminController@chkpassword');
+    // Route::match(['get', 'post'], '/admin/update-pwd', 'AdminController@updatePassword');
 
-    // Admin Property Module (Add/Update/View/Delete)
-    Route::match(['get', 'post'], '/admin/add-new-property', 'PropertyController@addProperty');
-    Route::get('/admin/properties', 'PropertyController@viewProperty');
-    Route::match(['get', 'post'], '/admin/edit-property/{id}', 'PropertyController@editProperty');
-    Route::match(['get', 'post'], '/add-new-property/check_slug', 'PropertyController@checkSlug');
-    Route::match(['get', 'post'], '/admin/delete-property/{id}', 'PropertyController@deleteProperty');
-    Route::get('/admin/delete-property-image/{id}', 'PropertyController@deletePropertyImage');
+    // Admin SinglePage Module (Add/Update/View/Delete)
+    Route::match(['get', 'post'], '/admin/add-new-page', 'PageController@addPage');
+    // Route::get('/admin/properties', 'PropertyController@viewProperty');
+    // Route::match(['get', 'post'], '/admin/edit-property/{id}', 'PropertyController@editProperty');
+    // Route::match(['get', 'post'], '/add-new-property/check_slug', 'PropertyController@checkSlug');
+    // Route::match(['get', 'post'], '/admin/delete-property/{id}', 'PropertyController@deleteProperty');
+    // Route::get('/admin/delete-property-image/{id}', 'PropertyController@deletePropertyImage');
 
     // Routes for Getting State List and City List Dynamically
     Route::get('/admin/get-state-list', 'PropertyController@getStateList');

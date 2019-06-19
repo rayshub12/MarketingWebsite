@@ -9,8 +9,8 @@
                         <a class="mobile-menu" id="mobile-collapse" href="#!">
                             <i class="feather icon-menu"></i>
                         </a>
-                        <a href="{{ url('/admin/dashboard') }}">
-                            <img class="img-fluid" src="{{ asset('assets/images/logo.png')}}" alt="Theme-Logo" />
+                        <a href="<?php echo e(url('/admin/dashboard')); ?>">
+                            <img class="img-fluid" src="<?php echo e(asset('assets/images/logo.png')); ?>" alt="Theme-Logo" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>
@@ -48,7 +48,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="{{ asset('assets/images/avatar-4.jpg')}}" alt="Generic placeholder image">
+                                                <img class="d-flex align-self-center img-radius" src="<?php echo e(asset('assets/images/avatar-4.jpg')); ?>" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <h5 class="notification-user">John Doe</h5>
                                                     <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -58,7 +58,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="{{ asset('assets/images/avatar-3.jpg')}}" alt="Generic placeholder image">
+                                                <img class="d-flex align-self-center img-radius" src="<?php echo e(asset('assets/images/avatar-3.jpg')); ?>" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <h5 class="notification-user">Joseph William</h5>
                                                     <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -68,7 +68,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="{{ asset('assets/images/avatar-4.jpg')}}" alt="Generic placeholder image">
+                                                <img class="d-flex align-self-center img-radius" src="<?php echo e(asset('assets/images/avatar-4.jpg')); ?>" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <h5 class="notification-user">Sara Soudein</h5>
                                                     <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -90,8 +90,8 @@
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="{{ asset('assets/images/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
-                                        <span>{{{ Auth::user()->first_name }}}</span>
+                                        <img src="<?php echo e(asset('assets/images/avatar-4.jpg')); ?>" class="img-radius" alt="User-Profile-Image">
+                                        <span><?php echo e(Auth::user()->first_name); ?></span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
@@ -101,7 +101,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{url('/admin/profile')}}">
+                                            <a href="<?php echo e(url('/admin/profile')); ?>">
                                                 <i class="feather icon-user"></i> Profile
                                             </a>
                                         </li>
@@ -116,7 +116,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{ url('/get-out')}}">
+                                            <a href="<?php echo e(url('/get-out')); ?>">
                                                 <i class="feather icon-log-out"></i> Logout
                                             </a>
                                         </li>
@@ -147,7 +147,7 @@
                             <div class="main-friend-list">
                                 <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
                                     <a class="media-left" href="#!">
-                                        <img class="media-object img-radius img-radius" src="{{ asset('assets/images/avatar-3.jpg')}}" alt="Generic placeholder image ">
+                                        <img class="media-object img-radius img-radius" src="<?php echo e(asset('assets/images/avatar-3.jpg')); ?>" alt="Generic placeholder image ">
                                         <div class="live-status bg-success"></div>
                                     </a>
                                     <div class="media-body">
@@ -156,7 +156,7 @@
                                 </div>
                                 <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
                                     <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="{{ asset('assets/images/avatar-2.jpg')}}" alt="Generic placeholder image">
+                                        <img class="media-object img-radius" src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="Generic placeholder image">
                                         <div class="live-status bg-success"></div>
                                     </a>
                                     <div class="media-body">
@@ -165,7 +165,7 @@
                                 </div>
                                 <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
                                     <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="{{ asset('assets/images/avatar-4.jpg')}}" alt="Generic placeholder image">
+                                        <img class="media-object img-radius" src="<?php echo e(asset('assets/images/avatar-4.jpg')); ?>" alt="Generic placeholder image">
                                         <div class="live-status bg-success"></div>
                                     </a>
                                     <div class="media-body">
@@ -174,7 +174,7 @@
                                 </div>
                                 <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
                                     <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="{{ asset('assets/images/avatar-3.jpg')}}" alt="Generic placeholder image">
+                                        <img class="media-object img-radius" src="<?php echo e(asset('assets/images/avatar-3.jpg')); ?>" alt="Generic placeholder image">
                                         <div class="live-status bg-success"></div>
                                     </a>
                                     <div class="media-body">
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
                                     <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="{{ asset('assets/images/avatar-2.jpg')}}" alt="Generic placeholder image">
+                                        <img class="media-object img-radius" src="<?php echo e(asset('assets/images/avatar-2.jpg')); ?>" alt="Generic placeholder image">
                                         <div class="live-status bg-success"></div>
                                     </a>
                                     <div class="media-body">
@@ -204,7 +204,7 @@
                 </div>
                 <div class="media chat-messages">
                     <a class="media-left photo-table" href="#!">
-                        <img class="media-object img-radius img-radius m-t-5" src="{{ asset('assets/images/avatar-3.jpg')}}" alt="Generic placeholder image">
+                        <img class="media-object img-radius img-radius m-t-5" src="<?php echo e(asset('assets/images/avatar-3.jpg')); ?>" alt="Generic placeholder image">
                     </a>
                     <div class="media-body chat-menu-content">
                         <div class="">
@@ -222,7 +222,7 @@
                     </div>
                     <div class="media-right photo-table">
                         <a href="#!">
-                            <img class="media-object img-radius img-radius m-t-5" src="{{ asset('assets/images/avatar-4.jpg')}}" alt="Generic placeholder image">
+                            <img class="media-object img-radius img-radius m-t-5" src="<?php echo e(asset('assets/images/avatar-4.jpg')); ?>" alt="Generic placeholder image">
                         </a>
                     </div>
                 </div>
@@ -237,4 +237,4 @@
             </div>
             <!-- Sidebar inner chat end-->
             <div class="pcoded-main-container">
-                <div class="pcoded-wrapper">
+                <div class="pcoded-wrapper"><?php /**PATH D:\GITCODE\MarketingWebsite\resources\views/admin/layouts/adminLayout/admin_header.blade.php ENDPATH**/ ?>
