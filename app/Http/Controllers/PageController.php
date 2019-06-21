@@ -44,30 +44,31 @@ class PageController extends Controller
     }
 
     // Showing Listed Properties By Admin
-    public function viewProperty()
+    public function viewPage()
     {
-        $properties = Property::orderBy('created_at', 'desc')->get();
-        $propertyImages = PropertyImages::get();
-        $properties = json_decode(json_encode($properties));
-        $propertyImages = json_decode(json_encode($propertyImages));
+        // $properties = Property::orderBy('created_at', 'desc')->get();
+        // $propertyImages = PropertyImages::get();
+        // $properties = json_decode(json_encode($properties));
+        // $propertyImages = json_decode(json_encode($propertyImages));
 
-        foreach ($properties as $key => $val) {
-            $service_name = Services::where(['id' => $val->service_id])->first();
-            $properties[$key]->service_name = $service_name->service_name;
-            $propertyimage_count = PropertyImages::where(['property_id' => $val->id])->count();
-            if ($propertyimage_count > 0) {
-                $propertyimage_name = PropertyImages::where(['property_id' => $val->id])->first();
-                $properties[$key]->image_name = $propertyimage_name->image_name;
-            }
-            $country_count = DB::table('countries')->where(['iso2' => $val->country])->count();
-            if ($country_count > 0) {
-                $country = DB::table('countries')->where(['iso2' => $val->country])->first();
-                $properties[$key]->country_name = $country->name;
-                $properties[$key]->currency = $country->currency;
-            }
-        }
+        // foreach ($properties as $key => $val) {
+        //     $service_name = Services::where(['id' => $val->service_id])->first();
+        //     $properties[$key]->service_name = $service_name->service_name;
+        //     $propertyimage_count = PropertyImages::where(['property_id' => $val->id])->count();
+        //     if ($propertyimage_count > 0) {
+        //         $propertyimage_name = PropertyImages::where(['property_id' => $val->id])->first();
+        //         $properties[$key]->image_name = $propertyimage_name->image_name;
+        //     }
+        //     $country_count = DB::table('countries')->where(['iso2' => $val->country])->count();
+        //     if ($country_count > 0) {
+        //         $country = DB::table('countries')->where(['iso2' => $val->country])->first();
+        //         $properties[$key]->country_name = $country->name;
+        //         $properties[$key]->currency = $country->currency;
+        //     }
+        // }
+        return view('admin.pages.view_page_list');
 
-        return view('admin.property.view-property', compact('properties', 'propertyimage_count'));
+        // return view('admin.property.view-property', compact('properties', 'propertyimage_count'));
     }
 
     // Delete property Image function

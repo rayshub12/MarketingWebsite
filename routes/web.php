@@ -29,7 +29,7 @@ Route::group(['middleware' => ['admin', 'admin:1']], function () {
 
     // Admin SinglePage Module (Add/Update/View/Delete)
     Route::match(['get', 'post'], '/admin/add-new-page', 'PageController@addPage');
-    // Route::get('/admin/properties', 'PropertyController@viewProperty');
+    Route::get('/admin/view-page', 'PageController@viewPage');
     // Route::match(['get', 'post'], '/admin/edit-property/{id}', 'PropertyController@editProperty');
     // Route::match(['get', 'post'], '/add-new-property/check_slug', 'PropertyController@checkSlug');
     // Route::match(['get', 'post'], '/admin/delete-property/{id}', 'PropertyController@deleteProperty');
