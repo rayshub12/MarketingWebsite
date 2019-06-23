@@ -28,32 +28,67 @@
                                         
                                     </ul>
                                 </li>
-                                <li class="">
-                                    <a href="navbar-light.html">
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
+                                        <span class="pcoded-mtext">Post</span>
+                                        <span class="pcoded-badge label label-warning">NEW</span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{{url('/admin/add-new-post')}}">
+                                                <span class="pcoded-mtext">Add Post</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="{{url('/admin/view-post')}}">
+                                                <span class="pcoded-mtext">View Post</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="{{url('/admin/post-category')}}">
+                                                <span class="pcoded-mtext">Category</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
                                         <span class="pcoded-mtext">Navigation</span>
                                     </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="widget-statistic.html">
+                                                <span class="pcoded-mtext" >Top Menu</span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="widget-data.html">
+                                                <span class="pcoded-mtext" >Main Menu</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="pcoded-hasmenu">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                                         <span class="pcoded-mtext" >Widget</span>
-                                        <span class="pcoded-badge label label-danger">100+</span>
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class=" ">
+                                            <a href="widget-chart.html">
+                                                <span class="pcoded-mtext" >Logo</span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
                                             <a href="widget-statistic.html">
-                                                <span class="pcoded-mtext" >Statistic</span>
+                                                <span class="pcoded-mtext" >Right Sidebar</span>
                                             </a>
                                         </li>
                                         <li class=" ">
                                             <a href="widget-data.html">
-                                                <span class="pcoded-mtext" >Data</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="widget-chart.html">
-                                                <span class="pcoded-mtext" >Chart Widget</span>
+                                                <span class="pcoded-mtext" >Left Sidebar</span>
                                             </a>
                                         </li>
 
@@ -65,82 +100,21 @@
                                 <li class="pcoded-hasmenu">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-box"></i></span>
-                                        <span class="pcoded-mtext" >Basic Components</span>
+                                        <span class="pcoded-mtext" >Appearance</span>
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class=" ">
-                                            <a href="alert.html">
-                                                <span class="pcoded-mtext">Alert</span>
+                                            <a href="{{url('/admin/editor')}}">
+                                                <span class="pcoded-mtext" >Editor</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="breadcrumb.html">
-                                                <span class="pcoded-mtext" >Breadcrumbs</span>
+                                            <a href="{{url('/admin/htaccess')}}">
+                                                <span class="pcoded-mtext" >Htaccess</span>
                                             </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="button.html">
-                                                <span class="pcoded-mtext" >Button</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="box-shadow.html">
-                                                <span class="pcoded-mtext" >Box-Shadow</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="accordion.html">
-                                                <span class="pcoded-mtext" >Accordion</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="generic-class.html">
-                                                <span class="pcoded-mtext" >Generic Class</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="tabs.html">
-                                                <span class="pcoded-mtext" >Tabs</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="color.html">
-                                                <span class="pcoded-mtext" >Color</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="label-badge.html">
-                                                <span class="pcoded-mtext">Label Badge</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="progress-bar.html">
-                                                <span class="pcoded-mtext" >Progress Bar</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="preloader.html">
-                                                <span class="pcoded-mtext" >Pre-Loader</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="list.html">
-                                                <span class="pcoded-mtext" >List</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="tooltip.html">
-                                                <span class="pcoded-mtext" >Tooltip And Popover</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="typography.html">
-                                                <span class="pcoded-mtext" >Typography</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="other.html">
-                                                <span class="pcoded-mtext" >Other</span>
+                                        </li><li class=" ">
+                                            <a href="{{url('/admin/robots.txt')}}">
+                                                <span class="pcoded-mtext" >Robots.txt</span>
                                             </a>
                                         </li>
                                     </ul>

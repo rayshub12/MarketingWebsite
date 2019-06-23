@@ -84,6 +84,7 @@
     <script src="{{asset('assets/js/vartical-layout.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/pages/dashboard/custom-dashboard.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/script.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>

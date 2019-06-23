@@ -5,13 +5,8 @@ namespace App\Http\Controllers;
 use DB;
 use Image;
 use App\User;
-use App\Property;
-use App\Services;
-use App\UserType;
-use App\Amenities;
-use App\PropertyTypes;
-use App\PropertyQuery;
-use App\PropertyImages;
+use App\Pages;
+use App\PageCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
@@ -20,44 +15,83 @@ use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PageController extends Controller
 {
-
     protected $posts_per_page = 12;
 
-    // This is the function for Add New Property by Admin
     public function addPage(Request $request)
     {
+        if($request->isMethod('POST'))
+        {
+            $data = $request->all();
+            // echo "<pre>"; print_r($data); die;
+
+            $author = Auth::user()->id;
+
+            if(empty($data['status'])){
+                $status = 1;
+            }else {
+                $status = 0;
+            }
+
+            if(empty($data['feature_post'])){
+                $feature = 0;
+            }else {
+                $feature = 1;
+            }
+
+            $page = new Pages;
+            $page->page_name      = $data['page_title'];
+            $page->page_url        = $data['page_url'];
+            // $page->page_type       = $data['page_type'];
+            $page->page_type_id   = $data['page_category'];
+            $page->description     = $data['description'];
+            $page->table_contents  = $data['table_contents'];
+            $page->methodology     = $data['methodology'];
+            // $page->featured        = $data['featured'];
+            // $page->add_by          = $data['add_by'];
+
+            // Upload Featured Images
+            if($request->hasFile('featured_image')){
+                $image_tmp = Input::file('featured_image');
+                if($image_tmp->isValid()){
+                    
+                    $extension = $image_tmp->getClientOriginalExtension();
+                    $filename = rand(1, 99999).'.'.$extension;
+                    $large_image_path = 'images/backend_images/post_images/large/'.$filename;
+                    // Resize image
+                    Image::make($image_tmp)->resize(730, 464)->save($large_image_path);
+
+                    // Store image in Services folder
+                    $posts->post_image = $filename;
+                }
+            }
+            $page->save();
+            return redirect()->back()->with('flash_message_success', 'Post Published Successfully!');
+        }
         return view('admin.pages.add_page');
     }
 
-    // Getting State List according to Country
-    public function getStateList(Request $request)
+    // Delete property Image function
+    public function deletePropertyImage(Request $request, $id = null)
     {
-        $states = DB::table("states")->where("country", $request->country_id)->pluck("name", "id");
-        return response()->json($states);
+        PropertyImages::where(['id' => $id])->delete();
+        return redirect()->back()->with('flash_message_success', 'Property image Deleted Successfully!');
     }
 
-    // Getting City List according to State
-    public function getCityList(Request $request)
-    {
-        $cities = DB::table("cities")->where("state_id", $request->state_id)->pluck("name", "id");
-        return response()->json($cities);
-    }
-
-    // Showing Listed Properties By Admin
+    // view Page Table
     public function viewPage()
     {
-        // $properties = Property::orderBy('created_at', 'desc')->get();
-        // $propertyImages = PropertyImages::get();
+        $pages = Pages::orderBy('created_at', 'desc')->get();
+        // $pageImages = PageImages::get();
         // $properties = json_decode(json_encode($properties));
-        // $propertyImages = json_decode(json_encode($propertyImages));
+        // $pageImages = json_decode(json_encode($pageImages));
 
         // foreach ($properties as $key => $val) {
         //     $service_name = Services::where(['id' => $val->service_id])->first();
         //     $properties[$key]->service_name = $service_name->service_name;
-        //     $propertyimage_count = PropertyImages::where(['property_id' => $val->id])->count();
-        //     if ($propertyimage_count > 0) {
-        //         $propertyimage_name = PropertyImages::where(['property_id' => $val->id])->first();
-        //         $properties[$key]->image_name = $propertyimage_name->image_name;
+        //     $pageimage_count = PageImages::where(['page_id' => $val->id])->count();
+        //     if ($pageimage_count > 0) {
+        //         $pageimage_name = PageImages::where(['page_id' => $val->id])->first();
+        //         $properties[$key]->image_name = $pageimage_name->image_name;
         //     }
         //     $country_count = DB::table('countries')->where(['iso2' => $val->country])->count();
         //     if ($country_count > 0) {
@@ -66,16 +100,8 @@ class PageController extends Controller
         //         $properties[$key]->currency = $country->currency;
         //     }
         // }
-        return view('admin.pages.view_page_list');
 
-        // return view('admin.property.view-property', compact('properties', 'propertyimage_count'));
-    }
-
-    // Delete property Image function
-    public function deletePropertyImage(Request $request, $id = null)
-    {
-        PropertyImages::where(['id' => $id])->delete();
-        return redirect()->back()->with('flash_message_success', 'Property image Deleted Successfully!');
+        return view('admin.pages.view_page', compact('pages'));
     }
 
     // View Single Property
@@ -662,6 +688,7 @@ class PageController extends Controller
         return view('admin.property.edit_property', compact('properties', 'propertyImage', 'getBuilder', 'getAgent', 'servicetype', 'propertytype', 'countryname', 'phonecode', 'propertyfor_dropdown', 'propertytype_dropdown', 'builder_dropdown', 'agent_dropdown', 'country_dropdown', 'state_dropdown', 'city_dropdown'));
     }
 
+    
     // Delete Property Function
     public function deleteProperty(Request $request, $id = null)
     {
