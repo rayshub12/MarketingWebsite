@@ -21,7 +21,7 @@ class AdminController extends Controller
         
         if ($request->isMethod('post')) {
             $data = $request->input();
-            if (Auth::attempt(['email' => $data['email'], 'password' => $data['password'], 'admin' => '1', 'status' => '1'])) {
+            if (Auth::attempt(['email' => $data['email'], 'password' => $data['password'], 'user_type' => '1', 'status' => '1'])) {
                 return redirect('/admin/dashboard')->with('flash_message_success', 'Login Successfull!');
             } else {
                 return redirect('/admin')->with('flash_message_error', 'Invalid Email Address or Password!');

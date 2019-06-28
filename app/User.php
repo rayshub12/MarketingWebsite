@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'phonecode', 'phone', 'country', 'state', 'city', 'usertype', 'provider', 'provider_id', 'servicetypeid'
+        'username','password','email','user_type','status'
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'
     ];
 
     public function hasRole($role){
@@ -41,13 +41,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function addNew($input)
-    {
-        $check = static::where('twitter_id',$input['twitter_id'])->first();
-
-        if(is_null($check)){
-            return static::create($input);
-        }
-        return $check;
-    }
 }
