@@ -1,0 +1,530 @@
+
+
+@font-face {
+	font-family: "Give You What You Like";
+	src: url("../fonts/Give%20You%20What%20You%20Like.woff") format("woff"),
+         url("../fonts/Give%20You%20What%20You%20Like.eot") format("eot");
+}
+
+
+
+
+
+.sliderWrap img{width:100%;}
+.sliderWrap h2 {
+	font-family: 'Give You What You Like', sans-serif;
+	font-size:3em;
+	color:#555;
+	text-align: center;
+	margin: 0px;
+}
+.sliderWrapMob {margin:70px 0 0 0;}
+.sliderWrapMob h2 {
+	font-family: 'Give You What You Like', sans-serif;
+	font-size:1.2em;
+	color:#555;
+	text-align: center;
+	margin: 0 !important; font-weight:bold; 
+}
+.moreBtnWrap a:hover{text-decoration: underline;}
+ 
+
+
+.menuWrap {
+    width: 83%;
+}
+.aboutMnm .container{   
+	border: 1px solid #eee;
+    margin: 0px auto;
+    width: 87% ;
+	    padding: 10px;
+}
+.newsWrap .newsInner{ height:auto !important;}
+.item h4{
+    font-size: 15px;
+    color: #cc0000;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
+
+    margin-top: 6px;
+    margin-bottom: 0px;
+	}
+#mixedSlider {
+  position: relative;
+}
+/*.item img{ width:232px !important;height:100px !important;}*/s
+
+#mixedSlider .MS-content {
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 1%;
+    height: 162px;
+    width: 97%;
+}
+#mixedSlider .MS-content .item {
+  display: inline-block;
+  width: 33.3333%;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
+  height: 100%;
+  white-space: normal;
+  padding: 0 10px;
+}
+@media (max-width: 991px) {
+  #mixedSlider .MS-content .item {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-content .item {
+    width: 100%;
+  }
+}
+#mixedSlider .MS-content .item .imgTitle {
+  position: relative;
+}
+#mixedSlider .MS-content .item .imgTitle .blogTitle {
+  margin: 0;
+  text-align: left;
+  letter-spacing: 2px;
+  color: #252525;
+  font-style: italic;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  bottom: 0;
+  font-weight: bold;
+  padding: 0 0 2px 10px;
+}
+#mixedSlider .MS-content .item .imgTitle img {
+  height: auto;
+  width: 100%;
+}
+#mixedSlider .MS-content .item p {
+  font-size: 16px;
+  margin: 2px 10px 0 5px;
+  text-indent: 15px;
+}
+#mixedSlider .MS-content .item a {
+  float: right;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 1px;
+    transition: linear 0.1s;
+}
+
+#mixedSlider .MS-controls button {
+     position: absolute;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+    font-size: 30px;
+    top: 95px;
+    color: red;
+    transition: 0.15s linear;
+}
+#mixedSlider .MS-controls button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 992px) {
+  #mixedSlider .MS-controls button {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls button {
+    font-size: 20px;
+  }
+}
+#mixedSlider .MS-controls .MS-left {
+  left: -7px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls .MS-left {
+    left: -10px;
+  }
+}
+#mixedSlider .MS-controls .MS-right {
+  right: 0px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls .MS-right {
+    right: -10px;
+  }
+}
+
+
+
+
+
+.smallBox{
+    
+    margin-top: -20px;
+	}
+.showCaseWrap {
+    padding: 0px !important;
+	}
+	.well-sm {
+       border-radius: 0px;
+    border: none;
+    padding: 18px;
+    margin: 0px;
+    margin-top: 63px;
+	clear:both;
+}
+
+
+.moreBtnWrap .btn-link {
+    color: #cc0000!important;
+}
+.articlesInner1 .date{color: #cc0000!important;
+    font-weight: 600;
+	}
+.newsInner1 .date{color: #cc0000!important;
+    font-weight: 600;}
+.newsInner .date{color: #cc0000!important;
+    font-weight: 600;}
+.newListWrap  h2 {
+	    font-size: 16px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    color: #333;
+    border: 1px solid #eee;
+    padding-left: 15px;
+    margin-bottom: 0px !important;
+	text-transform:uppercase;
+	font-weight:bold;
+	}
+
+.marketTypeWrap li a:hover {
+    color: #cc0000 !important;
+}
+
+
+.mainMenu {
+    
+    left: 16% !important;
+}
+.btn-info {
+    background-color: #cc0000 !important;
+    border-color: #cc0000 !important;
+}
+/*.slide img{     height: auto !important;
+    width: 100% !important;}*/
+.featuresWrap {
+    background: #fff;
+    margin-top: -15px;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    margin: 0 auto;
+	border:1px solid #eee;
+	
+}
+.sliderWrap{    margin-top: 97px;}
+   .aboutMnm p {
+    font-size: 13px !important;
+    line-height: 22px !important;
+    color: #666666 !important;
+	word-spacing: 2px;
+}
+.newReportsWrap p {
+    margin: 0;
+    font-size: 13px;
+	color: #999;
+}
+.newReportsWrap {
+     margin-bottom: 10px;
+}
+.aboutMnmTitle h2 {
+    margin: 25px 0 0 0;
+    line-height: 29px;
+    font-size: 20px !important;
+    color: #666;
+    font-weight: bold;
+}
+  .mega-dropdown-menu > li > ul > li > h2 > a {
+    display: table;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+}
+ .sub-second-nav h3 span {
+    display: table;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+}
+ .sub-second-nav h3 a {
+    display: table;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+}
+ .sub-second-nav li h3 {
+     padding: 2px 3px;
+    margin: 0px;
+	}
+	.HoverItemFirst li h3 {
+     padding: 2px 3px;
+    margin: 0px;
+	}
+	
+.HoverItemFirst h2 a{
+	padding: 5px 3px;
+    margin: 0px
+	}
+	.HoverItemFirst h2{
+	padding: 2px 3px;
+    margin: 0px
+	
+	}
+.mega-dropdown-menu > li > ul > li {
+    list-style: none;
+    padding: 0px;
+    border-bottom: 1px solid #6f6e6e;
+    position: inherit;
+    width: 272px;
+}
+.HoverItemFirst i{ font-size:10px;}
+.showCaseWrap h2 {
+  color: #333;
+    margin: 0;
+    padding: 23px 16px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+  .mega-dropdown-menu > li > ul > li > h2 > a {
+    display: table;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+}
+.researchSearchWrap {
+    width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    float: right;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: -10px;
+    margin-left: 45px;
+}
+.researchSearchWrap .icon-search {
+    background: none;
+    top: 5px;
+    left: -1px;
+}
+.researchSearchWrap input[type="text"] {
+    border: none;
+    width: 100%;
+    padding: 0 0 12px 33px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.showCaseWrap h2 {
+    color: #333;
+    margin: 0;
+    padding: 23px 16px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #eee !important;
+}
+.showCaseWrap .date {
+        color: #cc0000!important;
+    font-weight: 600;
+}
+
+.moreBtnWrap a{color: #cc0000!important;}
+
+.marketTypeWrap{
+width: 94%;
+    float: left;
+    clear: both;}
+
+.newListWrap li {
+    margin-bottom: 6px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #666;
+    font-size: 13px;
+}
+.knowledgeInner li {
+    line-height: 33px;
+    font-size: 13px;
+}
+
+	.newListWrap li {
+    border-bottom: 1px solid #eee;
+    max-height: 78px;
+    overflow: hidden;
+	}
+	.newsWrap .newsInner {
+    padding: 10px 15px;
+	border: 1px solid #eee;
+	
+    overflow: hidden;
+	}
+	.articlesInner1 {
+    padding: 10px 15px;
+	}
+	
+.knowledgeInner a {
+	color: #cc0000;
+    padding: 4px 11px;
+    border: 1px solid #cc0000;
+    margin: 36px;
+    border-radius: 6px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 13px;
+}
+body{ background-color:#fff; }
+
+.well-sm a{color:#cc0000 !important}
+
+
+.well-sm p{
+	    text-align: justify;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    margin-top: 15px;
+	}
+
+.articlesInner ul{
+margin-left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.articlesInner ul li{
+    font-size: 13px;
+    color: #eee !important;
+    border-bottom: 1px solid #eee;
+    padding-top: 5px;
+	list-style:none;
+	}
+	
+	.btnViewReports {
+        background: #fff;
+    display: inline-block;
+    border: 1px solid #cc0000;
+    margin: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	    font-size: 12px;
+}
+
+.marketTypeWrap li {
+    font-size: 12px;
+    padding: 10px 10px;
+    float: left;
+	border: none !important;
+}
+.marketTypeWrap li a {
+    color: #222;
+    height: 50px;
+    display: inline-block;
+	margin-top:10px;
+}
+	
+	
+.knowledgeWrap .knowledgeInner {
+    padding: 29px 5px;
+	}
+.articlesInner p{ color:#666;}
+
+.knowledgeWrap {
+      margin-bottom: 46px;
+    box-shadow: none;
+    width: 63.5%;
+    float: left;
+    margin-left: 2%;
+	margin-top: 30px;
+}
+.articlesWrap {
+   width: 29.5%;
+    margin: 0px;
+    float: right;
+    padding-right: 0px;
+    height: 415px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    margin-right: 17px;
+	margin-top: 30px;
+}
+.footerCallWrap .callInfo {
+    font-size: 15px;
+}
+.articlesWrap .articlesInner {
+    background: #fff;
+    padding: 0px 5px;
+    line-height: 20px;
+    
+}
+.HoverItemFirst h3 { width: 100%;}
+
+.HoverItemFirst h4{
+	display: table;
+    color: #fff;
+    padding:0 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+}
+.HoverItemFirst h4 a{
+	display: table;
+    color: #fff;
+  padding:0 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+}
+.HoverItemFirst h3 {
+	display: table;
+    color: #fff;
+  padding:0 5px;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.HoverItemFirst h3 a {
+    margin: 0px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: initial;
+    font-weight: normal;
+	padding:5px 5px !important;
+}
+
+#MarketResearch .HoverItemFirst span i {
+    float: right;
+    margin: 5px 0 0 0;
+}
+
+
