@@ -28,8 +28,9 @@ Route::group(['middleware' => ['admin', 'admin:1']], function () {
     // Route::match(['get', 'post'], '/admin/update-pwd', 'AdminController@updatePassword');
 
     // Admin SinglePage Module (Add/Update/View/Delete)
-    Route::match(['get', 'post'], '/admin/add-new-page', 'PageController@addPage');
     Route::get('/admin/view-page', 'PageController@viewPage');
+    Route::match(['get', 'post'], '/admin/add-new-page', 'PageController@addPage');
+    Route::match(['get', 'post'], '/admin/add-page-category', 'PageController@addPageCategory');
     // Route::match(['get', 'post'], '/admin/edit-page/{id}', 'PageController@editpage');
     // Route::match(['get', 'post'], '/add-new-page/check_slug', 'PageController@checkSlug');
     // Route::match(['get', 'post'], '/admin/delete-page/{id}', 'PageController@deletepage');

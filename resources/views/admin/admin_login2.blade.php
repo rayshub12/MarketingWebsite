@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>OnlyITstuff - Login</title>
     <meta charset="utf-8">
@@ -22,19 +21,11 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 </head>
-
 <body class="fix-menu">
     <!-- Pre-loader start -->
     <div class="theme-loader">
         <div class="ball-scale">
             <div class='contain'>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
                 <div class="ring"><div class="frame"></div></div>
                 <div class="ring"><div class="frame"></div></div>
                 <div class="ring"><div class="frame"></div></div>

@@ -20,7 +20,7 @@ class CreateQueryFormsTable extends Migration
             $table->string('company')->nullable();
             $table->string('email',199)->nullable();
             $table->integer('p_number')->nullable();
-            $table->string('comment')->nullable();
+            $table->text('comment')->nullable();
             $table->integer('type')->nullable();
             $table->timestamps();
         });

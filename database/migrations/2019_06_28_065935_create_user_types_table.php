@@ -17,7 +17,7 @@ class CreateUserTypesTable extends Migration
             $table->bigIncrements('id');
             $table->string('user_type')->nullable();
             $table->string('user_type_code')->nullable();
-            $table->string('status')->nullable()->default(1);
+            $table->boolean('status')->nullable()->default(1);
             $table->timestamps();
         });
     }

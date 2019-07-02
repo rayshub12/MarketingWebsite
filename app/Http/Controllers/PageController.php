@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use Image;
 use App\User;
-use App\Pages;
+use App\Page;
 use App\PageCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -38,7 +38,7 @@ class PageController extends Controller
                 $feature = 1;
             }
 
-            $page = new Pages;
+            $page = new Page;
             $page->page_name      = $data['page_title'];
             $page->page_url        = $data['page_url'];
             // $page->page_type       = $data['page_type'];
@@ -70,17 +70,10 @@ class PageController extends Controller
         return view('admin.pages.add_page');
     }
 
-    // Delete property Image function
-    public function deletePropertyImage(Request $request, $id = null)
-    {
-        PropertyImages::where(['id' => $id])->delete();
-        return redirect()->back()->with('flash_message_success', 'Property image Deleted Successfully!');
-    }
-
     // view Page Table
     public function viewPage()
     {
-        $pages = Pages::orderBy('created_at', 'desc')->get();
+        $pages = Page::orderBy('created_at', 'desc')->get();
         // $pageImages = PageImages::get();
         // $properties = json_decode(json_encode($properties));
         // $pageImages = json_decode(json_encode($pageImages));
@@ -102,6 +95,49 @@ class PageController extends Controller
         // }
 
         return view('admin.pages.view_page', compact('pages'));
+    }
+
+    //category controller
+    public function addPageCategory(Request $request)
+    {
+        if($request->isMethod('POST'))
+        {
+            $data = $request->all();
+
+            $author = Auth::user()->id;
+
+            if(empty($data['status'])){
+                $status = 1;
+            }else {
+                $status = 0;
+            }
+
+            if(empty($data['feature'])){
+                $feature = 0;
+            }else {
+                $feature = 1;
+            }
+
+            $page = new PageCategory;
+            $page->category_title   = $data['category_title'];
+            $page->category_name    = $data['category_name'];
+            $page->category_url     = $data['category_url'];
+            $page->description      = $data['description'];
+            $page->featured         = $feature;
+            $page->status           = $status;
+            // $page->added_by         = $data['added_by'];
+            $page->save();
+
+            return redirect()->back()->with('flash_message_success', 'Category Added Successfully!');
+        }
+        return view('admin.pages.add_page_category');
+    }
+
+    // Delete property Image function
+    public function deletePropertyImage(Request $request, $id = null)
+    {
+        PropertyImages::where(['id' => $id])->delete();
+        return redirect()->back()->with('flash_message_success', 'Property image Deleted Successfully!');
     }
 
     // View Single Property

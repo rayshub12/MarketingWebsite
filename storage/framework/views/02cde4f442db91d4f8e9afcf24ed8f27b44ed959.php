@@ -38,16 +38,16 @@
 
 	
 <!-- Bootstrap -->
-<link href="{{ asset('assets/custom_css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('assets/custom_css/bootstrap.min.css')); ?>" rel="stylesheet">
 <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'> -->
-<link href="{{ asset('assets/custom_css/font-awesome.min.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/custom_css/style6654.css?v1') }}" rel="stylesheet">
-<script language="javascript" src="{{ asset('assets/custom_js/jsfiles/validateletter.js') }}" type="text/javascript"></script>
-<script language="javascript" src="{{ asset('assets/custom_js/jsfiles/validatenewuser.js') }}" type="text/javascript" ></script>
+<link href="<?php echo e(asset('assets/custom_css/font-awesome.min.css')); ?>" rel="stylesheet">
+<link href="<?php echo e(asset('assets/custom_css/style6654.css?v1')); ?>" rel="stylesheet">
+<script language="javascript" src="<?php echo e(asset('assets/custom_js/jsfiles/validateletter.js')); ?>" type="text/javascript"></script>
+<script language="javascript" src="<?php echo e(asset('assets/custom_js/jsfiles/validatenewuser.js')); ?>" type="text/javascript" ></script>
 <link rel="canonical" href="index.html"/>
 <meta name="verify-v1" content="FXKi7/22MMSsT0Luz4x/M33WvBpqCRT96FFHgakQN0g=" />
-<link href="{{ asset('chatserver/css/comm100_livechatbutton.css')}}" rel="stylesheet" type="text/css"/>
-<script src="{{ asset('chatserver/js/LiveChat9e91.js?siteId=122367&amp;planId=1867&amp;partnerId=-1')}}" type="text/javascript"></script>
+<link href="<?php echo e(asset('chatserver/css/comm100_livechatbutton.css')); ?>" rel="stylesheet" type="text/css"/>
+<script src="<?php echo e(asset('chatserver/js/LiveChat9e91.js?siteId=122367&amp;planId=1867&amp;partnerId=-1')); ?>" type="text/javascript"></script>
 <style>
 
 
@@ -571,27 +571,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager by Tatvic-->
   <!--$$$$$$$$$$$$$$$$$$ GTM Code Ends $$$$$$$$$$$$$$$$$$-->
 
-@include('frontEnd.layouts.frontLayout.header_design')
+<?php echo $__env->make('frontEnd.layouts.frontLayout.header_design', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-@yield('content')
+<?php echo $__env->yieldContent('content'); ?>
 
-@include('frontEnd.layouts.frontLayout.footer_design')
+<?php echo $__env->make('frontEnd.layouts.frontLayout.footer_design', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
     <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="{{ asset('assets/custom_js/4760994.js')}}"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="<?php echo e(asset('assets/custom_js/4760994.js')); ?>"></script>
 <!-- End of HubSpot Embed Code -->
 		
 	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="{{ asset('assets/custom_js/js/bootstrap.min.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/jquery.bootstrap-responsive-tabs.min.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/jquery.cycle2.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/jquery.cycle2.swipe.min.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/jquery.cycle2.carousel.min.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/custom-home.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/custom.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/vs.menu.js') }}"></script>
-		<script src="{{ asset('assets/custom_js/js/multislider.min.js') }}" type="text/javascript"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/bootstrap.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/jquery.bootstrap-responsive-tabs.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/jquery.cycle2.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/jquery.cycle2.swipe.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/jquery.cycle2.carousel.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/custom-home.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/custom.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/vs.menu.js')); ?>"></script>
+		<script src="<?php echo e(asset('assets/custom_js/js/multislider.min.js')); ?>" type="text/javascript"></script>
 		<script>
 		$(document).ready(function(){
 			$('#mixedSlider').multislider({
@@ -617,3 +617,4 @@ guide: google.com/ads/remarketingsetup -->
 </script>	
 	</body>
 </html>
+<?php /**PATH D:\GITCODE\MarketingWebsite\resources\views/frontEnd/layouts/frontLayout/frontend_design.blade.php ENDPATH**/ ?>

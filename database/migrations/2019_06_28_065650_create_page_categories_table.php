@@ -16,10 +16,11 @@ class CreatePageCategoriesTable extends Migration
         Schema::create('page_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('category_name')->nullable();
+            $table->string('category_title')->nullable();
             $table->string('category_url')->nullable();
-            $table->string('description')->nullable();
-            $table->string('featured')->nullable()->default(0);
-            $table->string('status')->nullable()->default(1);
+            $table->text('description')->nullable();
+            $table->boolean('featured')->nullable()->default(0);
+            $table->boolean('status')->nullable()->default(1);
             $table->string('added_by')->nullable();
             $table->timestamps();
         });

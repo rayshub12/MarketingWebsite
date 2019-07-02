@@ -18,11 +18,11 @@ class CreatePagesTable extends Migration
             $table->integer('category_id')->nullable();
             $table->string('page_name')->nullable();
             $table->string('page_url')->nullable();
-            $table->string('description')->nullable();
-            $table->string('table_contents')->nullable();
-            $table->string('methodology')->nullable();
-            $table->string('featured')->nullable()->default(0);
-            $table->string('status')->nullable()->default(1);
+            $table->text('description')->nullable();
+            $table->text('table_contents')->nullable();
+            $table->text('methodology')->nullable();
+            $table->boolean('featured')->nullable()->default(0);
+            $table->boolean('status')->nullable()->default(1);
             $table->string('added_by')->nullable();
             $table->timestamps();
         });

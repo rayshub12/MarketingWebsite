@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('email',199)->nullable();
             $table->integer('user_type')->nullable();
-            $table->integer('status')->nullable()->default(1);
+            $table->boolean('status')->nullable()->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

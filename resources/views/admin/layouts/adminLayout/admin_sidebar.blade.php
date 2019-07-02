@@ -25,7 +25,11 @@
                             <span class="pcoded-mtext">View pages</span>
                         </a>
                     </li>
-                    
+                    <li class="">
+                        <a href="{{url('/admin/add-page-category')}}">
+                            <span class="pcoded-mtext">Category</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="pcoded-hasmenu">

@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bootstrap/css/bootstrap.min.css') }}">
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/icon/feather/css/feather.css') }}">
+    <!-- Switch component css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/switchery/css/switchery.min.css') }}">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.mCustomScrollbar.css') }}">
@@ -73,6 +75,8 @@
     <script type="text/javascript" src="{{asset('bower_components/modernizr/js/modernizr.js')}}"></script>
     <!-- Chart js -->
     <script type="text/javascript" src="{{asset('bower_components/chart.js/js/Chart.js')}}"></script>
+    <!-- Switch component js -->
+    <script type="text/javascript" src="{{asset('bower_components/switchery/js/switchery.min.js')}}"></script>
     <!-- amchart js -->
     <script src="{{asset('assets/pages/widget/amchart/amcharts.js')}}"></script>
     <script src="{{asset('assets/pages/widget/amchart/serial.js')}}"></script>

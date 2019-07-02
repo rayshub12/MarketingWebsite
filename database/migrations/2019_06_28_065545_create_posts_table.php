@@ -18,9 +18,9 @@ class CreatePostsTable extends Migration
             $table->integer('category_id')->nullable();
             $table->string('post_name')->nullable();
             $table->string('post_url')->nullable();
-            $table->string('description')->nullable();
-            $table->string('featured')->nullable()->default(0);
-            $table->string('status')->nullable()->default(1);
+            $table->text('description')->nullable();
+            $table->boolean('featured')->nullable()->default(0);
+            $table->boolean('status')->nullable()->default(1);
             $table->string('added_by')->nullable();
             $table->timestamps();
         });
